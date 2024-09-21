@@ -118,7 +118,7 @@ header {
 
 .intro_section {
   min-height: 100vh;
-  background: url('../../service_banner/photomanipulation.jpg') no-repeat;
+  background: url('../../service_banner/photomanipulation.webp') no-repeat;
   background-size: cover;
   background-position: 65%;
   position: fixed;
