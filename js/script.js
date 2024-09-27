@@ -115,3 +115,61 @@ scrollarrow.addEventListener('click', () => {
         behavior:"smooth"
     })
 })
+
+
+
+function thanx() {
+    var input_name = document.getElementById("name");
+    var input_email = document.getElementById("email");
+    // var input_number = document.getElementById("input_number");
+    var input_text = document.getElementById("review");
+  
+  
+    var input = document.getElementById("name");
+    var input = document.getElementById("email");
+    // var input = document.getElementById("input_number");
+    var input = document.getElementById("review");
+  
+    var paragraph = document.getElementById("thanx");
+  
+    if (input_name.value === "" && input_email.value === "" && input_text.value === "") {
+      paragraph.textContent = "Please fill all details.";
+      // paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
+  
+    }
+    else if(input.value === ""){
+      paragraph.textContent = "Please fill all details.";
+      setTimeout(function() {
+        paragraph.textContent = "";
+        document.getElementById("thanx").reset();
+      }, 3000);
+    } 
+    else {
+
+      document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+        // Use EmailJS to send form data
+        // service & temp id 
+        emailjs.sendForm('service_0g2lryl', 'template_b7ktukj', this)
+            .then(function(response) {
+                alert('Review submitted successfully!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('There was an error submitting your review. Please try again.');
+            });
+      });
+
+
+      paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
+      // paragraph.textContent = "Please fill all details.";
+  
+      // Clear the form after submission
+      setTimeout(function() {
+        paragraph.textContent = "";
+        document.getElementById("reviewForm").reset();
+      }, 3000);
+    }
+  }
+
+
+  

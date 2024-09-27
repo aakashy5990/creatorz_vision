@@ -20,7 +20,42 @@
 
     <div class="intro_section">
       <!-- .navbar fatched by navbar.html -->
-      <div class="main_navbar" id="main_navbar"></div>
+      <div class="main_navbar" id="main_navbar">
+        <header class="header">
+          <a href="#" class="nav_logo_link">
+            <!-- <img class="nav_logo_img" src="img/logo-01.png" alt=""> -->
+            <img class="nav_logo_img" src="img/333.png" alt="" />
+            <!-- <img class="nav_logo_img" src="gif/visiongiuf.gif" alt=""> -->
+          </a>
+      
+          <div class="hamb" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      
+          <nav class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <a href="form.html"><button class="button">Review</button></a>
+          </nav>
+        </header>
+        <!-- this navbar is for mobile  -->
+        <nav class="mobile_nav" id="menu-list">
+          <div class="remove_icon">
+            <i class="ri-close-line" id="close-menu"></i>
+          </div>
+          <div class="nav_main">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Review</a></li>
+          </div>
+        </nav>
+        
+        
+      </div>
 
       <!-- ************* intro content section is start ****************** -->
       <div class="intro_content">
@@ -110,7 +145,7 @@
               <a href="brandguildlines.html"><button class="service_btn">Brand Guidelines</button></a>
             </div>
             <div class="box_six service_box">
-              <button class="service_btn">3D Product Animation</button>
+              <a href="3danimation.html"><button class="service_btn">3D Product Animation</button></a>
             </div>
             <div class="box_seven service_b0ox ">
               <a href="socialMedia.html"><button class="service_btn">Social Media</button></a>
@@ -500,7 +535,7 @@
     <!-- ********************footer section End******************** -->
 
 
-    <script src="/creatorz_vision/js/component/navbar.js"></script>
+    <!-- <script src="js/component/navbar.js"></script> -->
     <script src="js/mediaquery.js"></script>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/script.js"></script>

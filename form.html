@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Review</title>
+    <link rel="stylesheet" href="css/forms.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // <!-- Replace with your actual User ID -->
+            emailjs.init("XW2efvn2WcKYhzMC6"); 
+        })();
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="main_container">
+            <div class="logo">
+                <div class="img_logo">
+                    <img src="img/333.png" alt="">
+                </div>
+            </div>
+            <p class="pera_heading">Submit Your Review</p>
+            <div class="form-container">
+                <form action="#" method="" id="reviewForm" novalidate>
+                    <div class="rating">
+                        <label class="Rating">Rating</label>
+                        <div class="stars">
+                            
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <!-- <span>☆</span> -->
+                        </div>
+                    </div>
+                    
+                    <p class="thanx" id="thanx"></p>
+                    <div class="form-group">
+                        <label for="review">Review</label>
+                        <textarea id="review" name="review" rows="4" placeholder="Write your comments here..." required></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your E-mail..." required>
+                    </div>
+        
+                    <div class="recommend">
+                        <label>Would you recommend this Designer?</label>
+                        <div class="buttons">
+                            <input type="radio" id="yes" name="recommend" value="yes" required>
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="recommend" value="no" required>
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+        
+                    <div class="submit-btn">
+                        <button type="submit" onclick="thanx()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
