@@ -90,7 +90,7 @@
   </head>
   <body>
     
-
+<!-- 
     <div class="container show-popup">
         <img src="service_img/logo_design/1.jpg" alt="" />
     </div>
@@ -100,17 +100,59 @@
         <div class="popup-box">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FewWUHxY79w?si=Ys1d3WZRXeEVFmXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-    </div>
+    </div> -->
+
+
+  <div class="container show-popup" data-video="https://www.youtube.com/embed/FewWUHxY79w?si=Ys1d3WZRXeEVFmXA">
+      <img src="service_img/logo_design/1.jpg" alt="" />
+  </div>
+  
+  <div class="container show-popup" data-video="https://www.youtube.com/embed/NEW_VIDEO_ID">
+      <img src="service_img/logo_design/2.jpg" alt="" />
+  </div>
+  
+  <div class="popup-container">
+      <i class="ri-close-line close-btn"></i>
+      <div class="popup-box">
+          <iframe id="popup-iframe" width="560" height="315" src="" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+  </div>
+
+  
+
 
     <script>
-      const showPopup = document.querySelector(".show-popup");
+      // const showPopup = document.querySelector(".show-popup");
+      // const popupContainer = document.querySelector(".popup-container");
+      // const closeBtn = document.querySelector(".close-btn");
+      // showPopup.onclick = () => {
+      //   popupContainer.classList.add("active");
+      // };
+      // closeBtn.onclick = () => {
+      //   popupContainer.classList.remove("active");
+      // };
+
+
+
+
+      const showPopups = document.querySelectorAll(".show-popup");
       const popupContainer = document.querySelector(".popup-container");
       const closeBtn = document.querySelector(".close-btn");
-      showPopup.onclick = () => {
-        popupContainer.classList.add("active");
-      };
+      const iframe = document.querySelector("#popup-iframe");     
+
+      showPopups.forEach(popup => {
+          popup.onclick = () => {
+              const videoUrl = popup.getAttribute("data-video");
+              iframe.src = videoUrl;
+              popupContainer.classList.add("active");
+          };
+      });     
+
       closeBtn.onclick = () => {
-        popupContainer.classList.remove("active");
+          popupContainer.classList.remove("active");
+          iframe.src = ""; // Stop video playback when popup is closed
       };
     </script>
   </body>
