@@ -3,21 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logo Design</title>
+    <title>3D Animation</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="css/remixicon.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <!-- <link rel="stylesheet" href="css/remixicon.css" /> -->
     <link rel="stylesheet" href="css/swiper-bundle.css" />
-    <link rel="stylesheet" href="css/services/productVisualization.css" />
+    <link rel="stylesheet" href="css/services/video_editing.css" />
     <link rel="stylesheet" href="css/mediaquery.css" />
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
+
+        /* Popup container styling */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, .0125);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the popup is on top of all other elements */
+}
+
+/* Popup container active state to make it visible */
+.popup-container.active {
+    display: flex;
+}
+
+/* Popup box styling */
+.popup-box {
+    /* position: relative; */
+    background-color: #fff;
+    padding: 20px;
+    width: 40%;
+    height: 50%;
+    /* border-radius: 10px; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.popup-box iframe {
+    width: 100%;
+    height: 100%;
+    max-height: 90vh;
+    /* border-radius: 8px; */
+}
+
+/* Close button styling */
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    /* top: 10px; */
+    /* right: 10px; */
+    right: 0;
+    margin: 3rem 3rem 0 0;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    border: 2px solid #fff;
+    top: 0;
+}
+
+.close-btn:hover {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+}
 
     </style>
   </head>
   <body>
+    
     <div class="cursor-outline" data-cursor-outline></div>
     <div class="cursor-dot" data-cursor-dot></div>
 
     <div class="intro_section">
+      
       <!-- .navbar fatched by navbar.html -->
       <div class="main_navbar" id="main_navbar">
         <header class="header">
@@ -60,8 +132,8 @@
       <div class="intro_content">
         <div class="intro_content_main">
           <div class="intro_text_content">
-            <p>3D Product <br> Visualization</p>
-            <p>Bringing Products to Life in 3D</p>
+            <p>3d Product Animation</p>
+            <p>Bringing Your Ideas to Life <br> with Stunning 3D Visuals</p>
             <!-- <p>than just Comic Sans.</p> -->
           </div>
         </div>
@@ -186,6 +258,7 @@
       </div>
 
 
+
     
 
     <!-- service card  -->
@@ -194,21 +267,30 @@
       <div class="service_card_main">
         <div class="service_card_main_container">
           <div class="service_card_box_one service_box_comm">
-            <a href="service_html/productVisualization/jewelry.html">
-              <img src="service_img/productVisualization/1.png" class="blur-img" alt="" />
-            </a>
+            <!-- <a href="">
+              <img src="service_img/3danimation/Elegance.webp" class="blur-img" alt="" />
+            </a> -->
+
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/FewWUHxY79w?si=Ys1d3WZRXeEVFmXA">
+                <img src="service_img/3danimation/Elegance.webp" alt="" />
+            </div>
+
           </div>
-          <p>Jewelry</p>
+          <p>Elegance</p>
           <!-- <p>The Futuristic Gamer Queen.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
         <div class="service_card_main_container">
           <div class="service_card_box_two service_box_comm">
-            <a href="service_html/productVisualization/omnitrix.html">
-              <img src="service_img/productVisualization/2.png" class="blur-img" alt="" />
-            </a>
+            <!-- <a href="service_html/brochure&catalouge/mainrising.html">
+              <img src="service_img/3danimation/Hover.webp" class="blur-img" alt="" />
+            </a> -->
+
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/Hover.webp" alt="" />
+            </div>
           </div>
-          <p>Omnitrix</p>
+          <p>Hover</p>
           <!-- <p>Journey of Humanity and Technology.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
@@ -216,21 +298,21 @@
       <div class="service_card_main">
         <div class="service_card_main_container">
           <div class="service_card_box_one service_box_comm">
-            <a href="service_html/productVisualization/perfume.html">
-              <img src="service_img/productVisualization/3.png" class="blur-img" alt="" />
-            </a>
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/Inside Out.webp" alt="" />
+            </div>
           </div>
-          <p>Perfume</p>
+          <p>Inside Out</p>
           <!-- <p>Evil Lurks Beyond the Trees.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
         <div class="service_card_main_container">
           <div class="service_card_box_two service_box_comm">
-            <a href="service_html/productVisualization/windows.html">
-              <img src="service_img/productVisualization/4.png" class="blur-img" alt="" />
-            </a>
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/laminated.webp" alt="" />
+            </div>
           </div>
-          <p>Window</p>
+          <p>laminated</p>
           <!-- <p>The flicker of hope in a darkened world.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
@@ -238,21 +320,43 @@
       <div class="service_card_main">
         <div class="service_card_main_container">
           <div class="service_card_box_one service_box_comm">
-            <a href="service_05.html">
-              <img src="service_img/productVisualization/5.png" class="blur-img" alt=""/>
-            </a>
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/Love.webp" alt="" />
+            </div>
           </div>
-          <p>...........</p>
+          <p>Love</p>
           <!-- <p>An unspoken connection.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
         <div class="service_card_main_container">
           <div class="service_card_box_two service_box_comm">
-            <a href="service_06.html">
-              <img src="service_img/productVisualization/6.png" class="blur-img" alt="" />
-            </a>
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/Monorail.webp" alt="" />
+            </div>
           </div>
-          <p>...........</p>
+          <p>Monorail</p>
+          <!-- <p>Hand in paw, they stand strong against the cold.</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet.</p> -->
+        </div>
+      </div>
+      <div class="service_card_main">
+        <div class="service_card_main_container">
+          <div class="service_card_box_one service_box_comm">
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/omnitrix.webp" alt="" />
+            </div>
+          </div>
+          <p>omnitrix</p>
+          <!-- <p>An unspoken connection.</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet.</p> -->
+        </div>
+        <div class="service_card_main_container">
+          <div class="service_card_box_two service_box_comm">
+            <div class="container show-popup" data-video="https://www.youtube.com/embed/-QIdv14T-3Q?si=K266StdlqjUSC-xp">
+              <img src="service_img/3danimation/uPVC.webp" alt="" />
+            </div>
+          </div>
+          <p>uPVC</p>
           <!-- <p>Hand in paw, they stand strong against the cold.</p> -->
           <!-- <p>Lorem ipsum dolor sit amet.</p> -->
         </div>
@@ -268,6 +372,50 @@
       </div>
     </div>
 
+
+    <!-- Popup Structure -->
+    <div class="popup-container" id="popup">
+        <div class="popup-box">
+        <span class="close-btn " id="close-popup">
+          <i class="ri-close-line"></i>
+        </span>
+        <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+  
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const popupContainer = document.getElementById('popup');
+    const closePopup = document.getElementById('close-popup');
+    const videoFrame = document.getElementById('video-frame');
+
+    // Trigger popup on click
+    document.querySelectorAll('.show-popup').forEach(item => {
+        item.addEventListener('click', function () {
+        const videoSrc = this.getAttribute('data-video');
+        videoFrame.src = videoSrc;
+        popupContainer.classList.add('active');
+        });
+    });
+
+    // Close popup
+    closePopup.addEventListener('click', function () {
+        popupContainer.classList.remove('active');
+        videoFrame.src = "";  // Reset video when closing popup
+    });
+
+    // Close popup when clicking outside of it
+    popupContainer.addEventListener('click', function (e) {
+        if (e.target === popupContainer) {
+        popupContainer.classList.remove('active');
+        videoFrame.src = "";  // Reset video when closing popup
+        }
+    });
+    });
+
+  </script>
 
     <!-- <script src="js/component/navbar.js"></script> -->
     <script src="js/script.js"></script>

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class today{
+public:
+	void display(){
+		cout << "Stduy" << endl;
+	}
+};
+
+class yesterday : public today{
+public:
+	void display(){
+		cout << "enjoy" << endl;
+	}
+};
+int main(){
+yesterday t;
+t.display();
+return 0;
+}
